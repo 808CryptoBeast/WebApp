@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins, sans-serif');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('BlueWorldCreate.mp4') no-repeat;
+    background-size: cover;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    border: 15px solid rgba(0, 0, 0, .25);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, .25);
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.form-box {
+    text-align: center;
+}
+
+.form-box h2 {
+    font-family: 'Old English Text Mt', serif;
+    color: #fff;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+}
+
+.input-box span.icon {
+    margin-right: 10px;
+}
+
+.remember-forgot {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+}
+
+.remember-forgot a {
+    margin-left: auto;
+}
+
+button.btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.icon-link {
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.icon-link ion-icon {
+    transition: color 0.5s;
+}
+
+.icon-link:hover ion-icon {
+    color: #3498db;
+}
