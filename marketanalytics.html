@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.o">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="marketanalytics.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <title> Market Analytics </title>
+    <title>Market Analytics</title>
 </head>
 <body>
     <nav class="sidebar">
@@ -19,7 +19,7 @@
                 </span>
 
                 <div class="text header-text">
-                    <span class="name">CodingLab</span>
+                    <span class="name">Crypto Beast</span>
                     <span class="profession">Web developer</span>
                 </div>
             </div>
@@ -28,10 +28,63 @@
         </header>
 
         <div class="menu-bar">
-            
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search-alt bx-tada icon'></i>
+                    <input type="search" placeholder="search...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home icon'></i>
+                            <span class="tex nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-folder-open icon'></i>
+                            <span class="tex nav-text">Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-line-chart icon'></i>
+                            <span class="tex nav-text">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-world bx-spin icon'></i>
+                            <span class="tex nav-text">Market Overview</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="tex nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark Mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <script src="marketanalytics.js"></script>
 
 </body>
 </html>
