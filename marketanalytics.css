@@ -190,12 +190,13 @@ body.dark .sidebar header .toggle {
 
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text {
-    color: var(--sidebar-color);
+    color: var(--toggle-color);
+    transition: var(--tran-02);
 }
 
 body.dark.sidebar li a:hover.icon,
 body.dark.sidebar li a:hover .text {
-    color: var(--text-color);
+    color: var(--sidebar-color);
 }
 
 .sidebar .menu-bar {
@@ -281,22 +282,63 @@ body.dark .switch::before {
 .home{
     position: relative;
     height: 100vh;
-    left: 250px;
-    width: calc(100% - 250px);
-    background: var(--body-color);
-    transition: var(--tran-05);
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+.video-container
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#backgroundVideo
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text-container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
 }
 
 .home .text 
 {
+    color: var(--text-color);
     font-size: 30px;
     font-weight: 500;
-    color: var(--text-color);
     padding: 8px 40px;
 }
 
-.sidebar.close ~ .home 
+.sidebar.close ~ .home,
+.sidebar.open ~ .home 
 {
-    height: 100vh;
-    width: calc(100% - 88px);
+    width: 200vw;
 }
+
+.sidebar.open ~ .home .video-container
+{
+    width: 200vw;
+}
+
+p 
+{
+    font-size: 18px;
+}
+

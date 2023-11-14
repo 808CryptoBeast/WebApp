@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link to Boxicons CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="marketanalytics.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Market Analytics</title>
 </head>
+
 <body>
+
+    <!-- Sidebar -->
     <nav class="sidebar close">
         <header>
+            <!-- Logo and Text -->
             <div class="image-text">
                 <span class="image">
                     <img src="B&C pics/MarketButtonIcon.png" alt="logo">
                 </span>
-
                 <div class="text header-text">
                     <span class="name">Crypto Beast Labs</span>
                     <span class="profession">Web Developer</span>
                 </div>
             </div>
-
+            <!-- Sidebar Toggle Icon -->
             <i class='bx bx-chevron-right toggle' id="sidebarToggle"></i>
         </header>
 
+        <!-- Menu -->
         <div class="menu-bar">
             <div class="menu">
+                <!-- Search Box -->
                 <li class="search-box">
-                    <i class='bx bx-search-alt icon'></i>
-                        <input type="text" placeholder="Search...">
+                    <i class='bx bx-search-alt icon' type="button"></i>
+                    <input type="text" placeholder="Search...">
                 </li>
+
+                <!-- Navigation Links -->
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="dashboard.html">
                             <i class='bx bx-home icon'></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bxs-folder-open icon' ></i>
+                            <i class='bx bxs-folder-open icon'></i>
                             <span class="text nav-text">Portfolio</span>
                         </a>
                     </li>
@@ -54,7 +65,7 @@
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bxs-news icon' ></i>
+                            <i class='bx bxs-news icon'></i>
                             <span class="text nav-text">News & Information</span>
                         </a>
                     </li>
@@ -66,25 +77,28 @@
                     </li>
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bx-envelope icon' ></i>
+                            <i class='bx bx-envelope icon'></i>
                             <span class="text nav-text">About & Contacts</span>
                         </a>
                     </li>
                 </ul>
             </div>
 
+            <!-- Bottom Content -->
             <div class="bottom-content">
+                <!-- Logout Link -->
                 <li class="nav-link">
                     <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
+                        <i class='bx bx-log-out icon'></i>
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
 
+                <!-- Dark Mode Toggle -->
                 <li class="mode">
                     <div class="moon-sun">
-                        <i class='bx bx-moon icon moon' ></i>
-                        <i class='bx bx-sun icon sun' ></i>
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
                     </div>
                     <span class="mode-text text">Dark mode</span>
 
@@ -92,16 +106,23 @@
                         <span class="switch"></span>
                     </div>
                 </li>
-
             </div>
         </div>
     </nav>
 
+    <!-- Home Section -->
     <section class="home">
-        <div class="text">Dashboard</div>
+        <!-- Video Container -->
+        <div class="video-container">
+            <video id="backgroundVideo" autoplay loop muted>
+                <source src="B&C pics/World Red ANd Green.mp4" type="video/mp4">
+            </video>
+        </div>
     </section>
 
+    <!-- Script -->
     <script src="marketanalytics.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,45 @@
+/* 3d.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    position: relative;
+}
+
+#3dViewer {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#tools {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: #3A3B3C;
+    text-align: center;
+}
+
+#tools button {
+    position: flex;
+    justify-content: space-between;
+    
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#tools button:hover {
+    background-color: #45a049;
+}

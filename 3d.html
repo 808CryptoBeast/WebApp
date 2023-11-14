@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Builder</title>
+    <link rel="stylesheet" href="3d.css">
+</head>
+<body>
+    <div id="3dViewer"></div>
+    <div id="tools">
+        <button onclick="changeObject('cube')">Cube</button>
+        <button onclick="changeObject('sphere')">Sphere</button>
+        <button onclick="changeMaterial('basic')">Basic Material</button>
+        <button onclick="changeMaterial('phong')">Phong Material</button>
+        <button onclick="changeMaterial('lambert')">Lambert Material</button>
+        <button onclick="changeColor(0x00ff00)">Green</button>
+        <button onclick="changeColor(0xff0000)">Red</button>
+    </div>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="3d.js"></script>
+</body>
+</html>
