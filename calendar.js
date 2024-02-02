@@ -1,3 +1,31 @@
+// function defineProperty() {
+//   var osccred = document.createElement("div");
+//   osccred.innerHTML =
+//     "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
+//   osccred.style.position = "absolute";
+//   osccred.style.bottom = "0";
+//   osccred.style.right = "0";
+//   osccred.style.fontSize = "10px";
+//   osccred.style.color = "#ccc";
+//   osccred.style.fontFamily = "sans-serif";
+//   osccred.style.padding = "5px";
+//   osccred.style.background = "#fff";
+//   osccred.style.borderTopLeftRadius = "5px";
+//   osccred.style.borderBottomRightRadius = "5px";
+//   osccred.style.boxShadow = "0 0 5px #ccc";
+//   document.body.appendChild(osccred);
+// }
+This will prevent the creation and appending of the mentioned div to the document.
+
+
+
+User
+can i just delet it
+ChatGPT
+Yes, if you don't want that specific div and its content to be part of your code, you can safely delete the entire defineProperty function. Here's the modified code without the defineProperty function:
+
+javascript
+Copy code
 const calendar = document.querySelector(".calendar"),
   date = document.querySelector(".date"),
   daysContainer = document.querySelector(".days"),
@@ -288,27 +316,7 @@ addEventTitle.addEventListener("input", (e) => {
   addEventTitle.value = addEventTitle.value.slice(0, 60);
 });
 
-function defineProperty() {
-  var osccred = document.createElement("div");
-  osccred.innerHTML =
-    "A Project By <a href='https://www.youtube.com/channel/UCiUtBDVaSmMGKxg1HYeK-BQ' target=_blank>Open Source Coding</a>";
-  osccred.style.position = "absolute";
-  osccred.style.bottom = "0";
-  osccred.style.right = "0";
-  osccred.style.fontSize = "10px";
-  osccred.style.color = "#ccc";
-  osccred.style.fontFamily = "sans-serif";
-  osccred.style.padding = "5px";
-  osccred.style.background = "#fff";
-  osccred.style.borderTopLeftRadius = "5px";
-  osccred.style.borderBottomRightRadius = "5px";
-  osccred.style.boxShadow = "0 0 5px #ccc";
-  document.body.appendChild(osccred);
-}
-
-defineProperty();
-
-//allow only time in eventtime from and to
+// allow only time in eventtime from and to
 addEventFrom.addEventListener("input", (e) => {
   addEventFrom.value = addEventFrom.value.replace(/[^0-9:]/g, "");
   if (addEventFrom.value.length === 2) {
