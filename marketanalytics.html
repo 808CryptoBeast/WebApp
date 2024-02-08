@@ -11,6 +11,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="marketanalytics.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
     <title>Market Analytics</title>
 </head>
@@ -23,7 +25,7 @@
             <!-- Logo and Text -->
             <div class="image-text">
                 <span class="image">
-                    <img src="WebApp/MarketButtonIcon.png" alt="logo">
+                    <img src="B&C pics/MarketButtonIcon.png" alt="logo">
                 </span>
                 <div class="text header-text">
                     <span class="name">Crypto Beast Labs</span>
@@ -39,14 +41,14 @@
             <div class="menu">
                 <!-- Search Box -->
                 <li class="search-box">
-                    <i class='bx bx-search-alt icon' type="button"></i>
+                    <i class='bx bx-search-alt icon' id="searchBtn"></i>
                     <input type="text" placeholder="Search...">
                 </li>
 
                 <!-- Navigation Links -->
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="index.html">
+                        <a href="dashboard.html">
                             <i class='bx bx-home icon'></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
@@ -64,9 +66,9 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="calendar.html">
+                        <a href="#">
                             <i class='bx bxs-news icon'></i>
-                            <span class="text nav-text">Calendar</span>
+                            <span class="text nav-text">News & Information</span>
                         </a>
                     </li>
                     <li class="nav-link">
@@ -102,7 +104,7 @@
                     </div>
                     <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch">
+                    <div class="toggle-switch" id="modeSwitch">
                         <span class="switch"></span>
                     </div>
                 </li>
@@ -118,7 +120,68 @@
                 <source src="B&C pics/World Red ANd Green.mp4" type="video/mp4">
             </video>
         </div>
+
+        <!-- Your Custom Widget -->
+        <div class="widget">
+            <div class="tradingview-widget-container" style="height:100%;width:100%">
+                <div id="tradingview_c75b7" style="height:calc(100% - 32px);width:100%"></div>
+                <div class="tradingview-widget-copyright">
+                    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                        <span class="blue-text">Track all markets on TradingView</span>
+                    </a>
+                </div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "autosize": true,
+                        "symbol": "BINANCE:XRPUSDT",
+                        "timezone": "Etc/UTC",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "en",
+                        "enable_publishing": false,
+                        "backgroundColor": "rgba(0, 0, 0, 1)",
+                        "gridColor": "rgba(152, 152, 152, 0.06)",
+                        "withdateranges": true,
+                        "range": "YTD",
+                        "hide_side_toolbar": false,
+                        "allow_symbol_change": true,
+                        "watchlist": [
+                            "BITSTAMP:BTCUSD",
+                            "COINBASE:BTCUSD",
+                            "BINANCE:BTCUSD",
+                            "BITSTAMP:XRPUSD",
+                            "COINBASE:XRPUSD",
+                            "KUCOIN:XRPUSDT",
+                            "MEXC:FLRUSDT",
+                            "COINBASE:FLRUSD",
+                            "BITFINEX:FLRUSD",
+                            "KRAKEN:SGBUSD",
+                            "BITFINEX:SGBUSD",
+                            "MEXC:SGBUSDT",
+                            "MEXC:CSPRUSDT",
+                            "OKX:CSPRUSDC",
+                            "GATEIO:CSPRUSDT",
+                            "COINBASE:HBARUSD",
+                            "BINANCE:GALAUSDT"
+                        ],
+                        "details": true,
+                        "hotlist": true,
+                        "calendar": true,
+                        "show_popup_button": true,
+                        "popup_width": "1000",
+                        "popup_height": "550",
+                        "container_id": "tradingview_c75b7"
+                    });
+                </script>
+            </div>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Add your footer content here -->
+    </footer>
 
     <!-- Script -->
     <script src="marketanalytics.js"></script>
