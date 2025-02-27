@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins, sans-serif');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('BlueWorldCreate.mp4') no-repeat;
+    background: url('WebApp/rocket.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .wrapper {
     display: flex;
-    color: #fff;
+    color: #fcfafa;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -38,13 +38,9 @@ body {
     border: 15px solid rgba(0, 0, 0, .25);
     border-radius: 3px;
     background: rgba(0, 0, 0, .25);
-    width: 400px;
-    height: 300px;
-    margin-bottom: 20px;
-}
-
-.form-box {
-    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
 }
 
 .form-box h2 {
@@ -55,6 +51,7 @@ body {
 .input-box {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .input-box span.icon {
@@ -65,15 +62,6 @@ body {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
-}
-
-.remember-forgot label {
-    display: flex;
-    align-items: center;
-}
-
-.remember-forgot a {
-    margin-left: auto;
 }
 
 button.btn {
@@ -100,31 +88,11 @@ header {
 }
 
 .navigation a {
-    position: relative;
     font-size: 1.1em;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
-}
-
-.navigation a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-
-.navigation a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
 }
 
 .navigation .btnLogin-popup {
@@ -158,10 +126,6 @@ header {
     color: #fff;
     font-size: 1.5em;
     text-decoration: none;
-}
-
-.icon-link ion-icon {
-    transition: color 0.5s;
 }
 
 .icon-link:hover ion-icon {

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana - LLM Models Showcase</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('/WebApp/ai.jpg') no-repeat center center fixed; /* Your background image */
+            background-size: cover;
+            background-color: rgb(165, 162, 180); /* Set text to white for contrast */
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #e7e4e4;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        .model-card {
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+        .model-card:hover {
+            color: green;
+            background-color: #f0f0ff;
+            transform: translateY(-5px);
+        }
+        .model-info {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+        /* Chatbox styling */
+        .chat-container {
+            background-color: #ffffff79;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .chat-messages {
+            border: 2px solid #dcdcdc;
+            border-radius: 10px;
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f2f0f3; /* Light purple for chat background */
+        }
+        .chat-input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            box-sizing: border-box;
+        }
+        .send-btn {
+            padding: 12px 24px;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .send-btn:hover {
+            background-color: #0056b3;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+        .user-message {
+            background-color: #d1ecf1; /* Light blue */
+            align-self: flex-start;
+        }
+        .bot-message {
+            background-color: #f8d7da07; /* Light pink */
+            align-self: center;
+            font-style: italic;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title properly inserted -->
+        <h1>Mana - LLM Models Showcase</h1>
+
+        <!-- Model Cards -->
+        <div class="model-card" onclick="toggleInfo(1)">
+            <a href="https://openai.com/research/gpt-3" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>GPT-3</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-1">
+                <p>GPT-3 (Generative Pre-trained Transformer 3) by OpenAI is one of the most advanced language models with 175 billion parameters. It is capable of generating text, writing code, answering questions, and more.</p>
+            </div>
+        </div>
+
+        <div class="model-card" onclick="toggleInfo(2)">
+            <a href="https://openai.com/research/gpt-4" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>GPT-4</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-2">
+                <p>GPT-4, the successor of GPT-3, offers improved reasoning capabilities and better performance across a wider range of tasks, including understanding and generating complex text.</p>
+            </div>
+        </div>
+
+        <div class="model-card" onclick="toggleInfo(3)">
+            <a href="https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>BERT</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-3">
+                <p>BERT (Bidirectional Encoder Representations from Transformers) by Google is designed to pre-train deep bidirectional representations from the unlabeled text. It excels in understanding the context of words in a sentence.</p>
+            </div>
+        </div>
+
+        <div class="model-card" onclick="toggleInfo(4)">
+            <a href="https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>T5</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-4">
+                <p>T5 (Text-to-Text Transfer Transformer) by Google treats every NLP task as a text-to-text problem, making it very versatile for a variety of applications.</p>
+            </div>
+        </div>
+
+        <div class="model-card" onclick="toggleInfo(5)">
+            <a href="https://arxiv.org/abs/1906.08237" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>XLNet</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-5">
+                <p>XLNet is an autoregressive model that improves upon BERT by considering all permutations of the input to better capture context and improve understanding.</p>
+            </div>
+        </div>
+
+        <div class="model-card" onclick="toggleInfo(6)">
+            <a href="https://bigscience.huggingface.co/blog/bloom" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="text-container">
+                    <h2>Bloom</h2>
+                </div>
+            </a>
+            <div class="model-info" id="model-info-6">
+                <p>Bloom is a multilingual language model that supports text generation in over 46 languages, making it a powerful tool for diverse linguistic applications.</p>
+            </div>
+        </div>
+
+        <!-- Chat interface -->
+        <div class="chat-container">
+            <h2>Interact with Mana</h2>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    Aloha! How can I assist you today? or anything you'd like to know.
+                </div>
+            </div>
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message here...">
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <script>
+        // Toggle model info display
+        function toggleInfo(modelNumber) {
+            const info = document.getElementById(`model-info-${modelNumber}`);
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+
+        // Chat simulation
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const messageText = input.value.trim();
+            if (messageText) {
+                const chatMessages = document.getElementById('chat-messages');
+
+                // Append user message
+                const userMessage = document.createElement('div');
+                userMessage.classList.add('message', 'user-message');
+                userMessage.textContent = messageText;
+                chatMessages.appendChild(userMessage);
+
+                // Scroll to the bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Clear input
+                input.value = '';
+
+                // Send user message to the backend and get ChatGPT's response
+                const response = await fetch('http://localhost:5000/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: messageText }),
+                });
+                const data = await response.json();
+
+                // Append ChatGPT's message
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('message', 'bot-message');
+                botMessage.textContent = data.reply;
+                chatMessages.appendChild(botMessage);
+
+                // Scroll to the bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
